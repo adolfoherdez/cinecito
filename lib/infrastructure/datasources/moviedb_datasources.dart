@@ -10,8 +10,10 @@ class MoviedbDatasources extends MoviesDatasources{
       ),
   );
   @override
-  Future<List<Map<String,dynamic>>> getNowPlaying({int page=1}){
+  Future<List<Map<String,dynamic>>> getNowPlaying({int page=1}) async{
     final response = await dio.get('movie/nowPlaying');
     final moviedbResponse = response.data;
+
+    return List<Map<String,dynamic>>.from(response.data['results']);
   }
 }

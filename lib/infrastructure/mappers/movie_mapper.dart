@@ -20,6 +20,6 @@ class MovieMapper {
     );
 
   static String toPosterImage(String path){
-    return path == '' ? 'https://image.tmdb.org/t/p/w500$path' : 'no-poster';
+    return path != '' ? 'https://image.tmdb.org/t/p/w500$path' : 'no-poster';
   }
 }

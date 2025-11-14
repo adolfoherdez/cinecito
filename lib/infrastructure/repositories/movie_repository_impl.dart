@@ -2,7 +2,6 @@ import 'package:cinecito/domain/datasources/movies_datasources.dart';
 import 'package:cinecito/domain/entities/movie.dart';
 import 'package:cinecito/domain/repositories/movies_repositories.dart';
 
-
 class MoviesRepositoryImpl extends MoviesRepositories{
   final MoviesDatasources datasource;
 
